@@ -2,20 +2,19 @@
 "answers": [
         {
           "id" : 1,
-          "answer" : "I don't know", 
+          "answer" : "I don't know"
         },
         {
           "id" : 2,
-          "answer" : "I wanna know what it's",
+          "answer" : "I wanna know what it's"
         },
         {
           "id" : 3,
-          "answer" : "Tell me",
+          "answer" : "Tell me"
         },
         {
           "id" : 4,
-          "answer" : "I'm not sure to know this",
+          "answer" : "I'm not sure to know this"
         }
-
 ]
 }
