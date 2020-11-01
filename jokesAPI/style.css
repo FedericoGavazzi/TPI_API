@@ -1,0 +1,35 @@
+body {
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/background.png?raw=true");
+}
+
+#card {
+    background-color: coral;
+    border-width: 5px;
+    border-color: indigo;
+    margin: 100px;
+}
+
+#card-body {
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/background-img.png?raw=true");
+}
+
+.titolo {
+    text-align: center;
+    background-color: yellow;
+}
+
+#card-setup {
+    text-align: left;
+}
+
+#response {
+    text-align: right;
+}
+
+#card-punchline {
+    text-align: left;
+}
+
+#jokester {
+    font-size: 25px;
+}
