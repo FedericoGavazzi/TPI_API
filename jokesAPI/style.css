@@ -1,5 +1,5 @@
 body {
-    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/background.png?raw=true");
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/black-patterns-4.jpg?raw=true");
 }
 
 #card {
@@ -11,6 +11,10 @@ body {
 
 #card-body {
     background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/background-img.png?raw=true");
+}
+
+#card {
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/black-patterns-4.jpg?raw=true");
 }
 
 .titolo {
