@@ -7,18 +7,21 @@ const response = document.getElementById("response")
 const previous = document.getElementById("previous")
 const url = "https://raw.githubusercontent.com/FedericoGavazzi/TPI_API/main/jokes.json";
 const url_ans = "https://raw.githubusercontent.com/FedericoGavazzi/TPI_API/main/answer.json";
+let jokes = []
 let pointer = 0;
 let previous_joke = []
 let answer = getAnswer(url_ans)
+getJoke(url)
+
 
 nxtBtn.onclick = () => {
-    getJoke(url)
+    changeJoke(jokes[Math.floor(Math.random() * 386)]);
     pointer++
 }
 
 previous.onclick = () => {
-    prevJoke()
     pointer--
+    prevJoke()
 }
 
 function getAnswer(collegamento) {
@@ -32,22 +35,23 @@ function getJoke(collegamento) {
     fetch(collegamento)
         .then(resp => resp.json())
         .then(file => {
-            let jokes = file.jokes;
-            let random = jokes[Math.floor(Math.random() * 386)];
-            changeJoke(random);
+            jokes = file.jokes
         })
-        .catch(err => console.log(err))
+        .catch(err => {
+            console.log(err)
+            getJoke(url)
+        })
 }
 
 function prevJoke() {
-    if (pointer == 0) {
+    if (pointer < 0) {
         pointer = previous_joke.length
         getJoke(url)
-    } else {
-        head.innerHTML = "Funny joke no: " + previous_joke[pointer - 1].id
-        setup.innerHTML = previous_joke[pointer - 1].setup
-        punch.innerText = previous_joke[pointer - 1].punchline
-        type.innerHTML = previous_joke[pointer - 1].type
+    } else if (pointer >= 0) {
+        head.innerHTML = "Funny joke no: " + previous_joke[pointer].id
+        setup.innerHTML = previous_joke[pointer].setup
+        punch.innerText = previous_joke[pointer].punchline
+        type.innerHTML = previous_joke[pointer].type
         response.innerHTML = answer[Math.floor(Math.random() * 3)].answer
     }
 }
@@ -60,12 +64,14 @@ function changeJoke(joke) {
         type.innerHTML = joke.type
         response.innerHTML = answer[Math.floor(Math.random() * 3)].answer
         previous_joke[previous_joke.length] = joke
-    } else {
+    } else if (pointer < previous_joke.length) {
         head.innerHTML = "Funny joke no: " + previous_joke[pointer].id
         setup.innerHTML = previous_joke[pointer].setup
         punch.innerText = previous_joke[pointer].punchline
         type.innerHTML = previous_joke[pointer].type
         response.innerHTML = answer[Math.floor(Math.random() * 3)].answer
+    } else if (pointer > previous_joke.length) {
+        pointer--
     }
 
 
