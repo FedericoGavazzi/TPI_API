@@ -1,39 +1,107 @@
 body {
-    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/black-patterns-4.jpg?raw=true");
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/jokesAPI/black-patterns-4.jpg?raw=true");
 }
 
-#card {
-    background-color: coral;
-    border-width: 5px;
-    border-color: indigo;
-    margin: 100px;
-}
-
-#card-body {
-    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/background-img.png?raw=true");
-}
-
-#card {
-    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/black-patterns-4.jpg?raw=true");
+a {
+    color: black;
 }
 
 .titolo {
+    font-family: Jazz LET, fantasy;
+    background-color: #c47d31;
+    margin-bottom: 0px;
+    border-color: black;
+    border-width: 1px;
     text-align: center;
-    background-color: yellow;
+}
+
+#nav {
+    background-color: #D58936;
+}
+
+#footer {
+    margin-top: 143px;
+    background-color: #D58936;
+}
+
+#card-body {
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/jokesAPI/background-img.png?raw=true");
+}
+
+#card {
+    border-width: 5px;
+    margin: 100px;
+    background-image: url("https://github.com/FedericoGavazzi/TPI_API/blob/main/jokesAPI/black-patterns-4.jpg?raw=true");
+}
+
+#jokester {
+    font-size: 50px;
+    font-weight: 600;
+    font-family: Jazz LET, fantasy;
+    color: white;
+}
+
+#card-header {
+    padding-left: 100;
+    padding-bottom: 5;
+    background-color: #050035;
 }
 
 #card-setup {
     text-align: left;
+    background-color: #6B0504;
 }
 
 #response {
     text-align: right;
+    background-color: #F61713;
 }
 
 #card-punchline {
     text-align: left;
+    background-color: #6B0504;
+}
+
+#card-footer {
+    padding: 0px;
+    background-color: #D58936;
+}
+
+#previous {
+    margin-left: 15px;
+    margin-top: 2px;
+    border-right-color: black;
+    border-width: 0px;
+    background-color: #D58936;
+    font-size: 20px;
+    font-family: Jazz LET, fantasy;
+}
+
+#next {
+    margin-right: 15px;
+    border-left-color: black;
+    border-width: 3px;
+    background-color: #D58936;
+    font-size: 20px;
+    font-family: Jazz LET, fantasy;
 }
 
 #jokester {
     font-size: 25px;
+}
+
+#list {
+    border-top: black;
+    border-bottom: black;
+    border-width: 1px;
+}
+
+#joke_list {
+    border-color: #D58936;
+    border-width: 5px;
+}
+
+#joke_list {
+    border-width: 5px;
+    margin: 150px;
 }

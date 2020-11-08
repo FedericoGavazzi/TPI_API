@@ -5,58 +5,77 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Jokes Generator</title>
+    <link href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="style.css" rel="stylesheet" type="text/css" />
-    <href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 
 <body>
+    <!-- Titolo del sito -->
     <div>
-        <h1 class="titolo" style="background-color: #D58936;">FUNNY JOKES GENERATOR</h1>
+        <h1 class="titolo">
+            JOKES GENERATOR</h1>
     </div>
 
-    <div class="shadow p-3 mb-5 rounded" style="background-color: #000000;" id="card">
-        <div class="card text-center" style="border-color: #000000;">
-            <div class="card-header" style="padding-left: 100; padding-bottom: 5; background-color: #050035;">
-                <div class="row">
-                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQMMykHqh0q7hap0FfKdwvg8Cmmy4ZEQf_HMQ&usqp=CAU" class="rounded-circle" alt="" height="40px" width="40px">
-                    <div class="col text-white" id="jokester">The Jokester</div>
-                </div>
+    <!-- Navbar con i link alla prima e alla seconda pagina -->
+    <nav class="border border-dark">
+        <div class="row" id="nav">
+            <div class="col-1"> <a class="nav-link" href="index.html">Home</a></div>
+            <div class="col-1"> <a class="nav-link" href="secondPage.html">All jokes</a></div>
+        </div>
+    </nav>
+
+    <!-- Card contente il layout dove mostro la battuta in stile chat -->
+    <div class="card text-center p-3 mb-5 rounded" id="card">
+
+        <!-- Header della card in cui imposto il nome del contatto e l'immagine -->
+        <div class="card-header" id="card-header">
+            <div class="row">
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQMMykHqh0q7hap0FfKdwvg8Cmmy4ZEQf_HMQ&usqp=CAU" class="rounded-circle" alt="" height="40px" width="40px">
+                <div class="col" id="jokester">The Jokester</div>
             </div>
-            <div class="card-body" id="card-body">
-                <div class="d-flex flex-row bd-highlight" style="margin-left: 50px;">
-                    <p class="p-3 mb-2 text-white" style="background-color: #6B0504;" id="card-setup">Not a funny joke?</p>
-                </div>
-                <div class="d-flex flex-row-reverse bd-highlight" style="margin-right: 50px;">
-                    <p class="p-3 mb-2 text-white" style="background-color: #F61713;" id="response">I don't know</p>
-                </div>
-                <div class="d-flex flex-row bd-highlight" style="margin-left: 50px;">
-                    <p class="p-3 mb-2 text-white" style="background-color: #6B0504;" id="card-punchline">Maybe you can skip</p>
-                </div>
+        </div>
+
+        <!-- Corpo della card in cui viene mostrata la battuta: setup, risposta e punchline -->
+        <div class="card-body" id="card-body">
+            <div class="d-flex flex-row bd-highlight" style="margin-left: 45px;">
+                <p class="p-3 mb-2 text-white" id="card-setup">Not a funny joke?</p>
             </div>
-            <div class="card-footer" style="padding: 0px; background-color:  #D58936;">
-                <div class="row">
-                    <div class="col btn text-white" style=" margin-left:15px; margin-top: 2px; border-right-color: black; border-width: 0px; background-color:  #D58936; font-size: 20px;" id="previous">
-                        Previous funny joke
-                    </div>
-                    <div class="col btn text-white" style="margin-right: 15px; border-left-color: black; border-width: 3px; background-color: #D58936; font-size: 20px;" id="next">
-                        Next funny joke
-                    </div>
+            <div class="d-flex flex-row-reverse bd-highlight" style="margin-right: 45px;">
+                <p class="p-3 mb-2 text-white" id="response">I don't know</p>
+            </div>
+            <div class="d-flex flex-row bd-highlight" style="margin-left: 45px;">
+                <p class="p-3 mb-2 text-white" id="card-punchline">Maybe you can skip</p>
+            </div>
+        </div>
+
+        <!-- Footer della card in cui sono presenti i bottoni per muoversi avanti e indietro tra le varie battute -->
+        <div class="card-footer" id="card-footer">
+            <div class="row">
+                <div class="col btn text-black" id="previous">
+                    Previous funny joke
+                </div>
+                <div class="col btn text-black" id="next">
+                    Next funny joke
                 </div>
             </div>
         </div>
     </div>
-    <footer style="margin-top: 150px; background-color: #D58936;">
-        <div class="row">
-            <div class="col text-black" style="margin-left: 70px;" id="card-type"></div>
-            <div class="col text-black" style="margin-left: 50px; text-align: center;">© Copyright 2020 Federico Gavazzi
+
+    <!-- Footer della pagina in cui vengono mostrati: 
+    categoria della battuta, id della battuta, copyright e link al progetto github -->
+    <footer class="footer" id="footer">
+        <div class="row" style="padding-top: 3px;">
+            <div class="col-2 text-black" style="margin-left: 70px;" id="joke-type"></div>
+            <div class="col-2 text-black text-right" style="margin-left: 50px;" id="joke-id"></div>
+            <div class="col-4 text-black" style="margin-left: 50px; text-align: center;">© Copyright 2020 Federico Gavazzi
             </div>
-            <div class="col text-black" style="margin-right: 50px; text-align: right;" id="testa"></div>
+            <div class="col-2 text-right" style="margin-left: 50px;">
+                <a href="https://github.com/FedericoGavazzi/TPI_API" target="_blank"><img src="data:image/png;base64,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"
+                        height="30" width="30" alt="">github project</a>
+            </div>
         </div>
     </footer>
-
-
 
     <!-- script -->
     <script src="script.js">
